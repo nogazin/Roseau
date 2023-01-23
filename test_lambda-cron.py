@@ -22,7 +22,7 @@ class TestLambda:
         },
         'Handler': 'index.main',
         'Runtime': 'python3.7',
-        'Timeout': 300,
+        'Timeout': 120,
       },
       'DependsOn':[dependency_capture]
     })
