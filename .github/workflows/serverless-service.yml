@@ -37,5 +37,7 @@ jobs:
           aws-region: "us-east-1"
       - name: Deploy to AWS
         run: cdk deploy --app="python3 ${PWD}/app.py" --require-approval=never
+      - name: Destroy stack
+        run: cdk destroy --app="python3 ${PWD}/app.py" --force
 
       
