@@ -58,7 +58,7 @@ class TestLambda:
 class TestEvents:
   def test_event_has_correct_rule(self):
     template.has_resource_properties('AWS::Events::Rule', {
-      'ScheduleExpression': 'cron(0 18 ? * MON-FRI *)',
+      'ScheduleExpression': 'cron(* * * * *)',
       'State': 'ENABLED',
       'Targets': Match.any_value(),
     })
